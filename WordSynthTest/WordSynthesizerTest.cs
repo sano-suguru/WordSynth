@@ -12,5 +12,11 @@ namespace WordSynthTest {
       synth.AddEffect(Effects.Reverce());
       Assert.Equal("!!!##CC !!!SSII !!!!!LLUUFFRREEDDNNOOWW", synth.Play("C# is wonderful!"));
     }
+
+    [Fact]
+    public void TestPlayWithNoEffect() {
+      var synth = new WordSynthesizer();
+      Assert.Equal("C# is wonderful!", synth.Play("C# is wonderful!"));
+    }
   }
 }
