@@ -5,6 +5,8 @@
 プロを目指すためのRuby入門の課題をC#で実装
 
 ```cs
+// Effects mthods returns Func<string, string>
+
 var echo = Effects.Echo(2);
 echo.Invoke("C# is wonderful!");  //=> "CC## iiss wwoonnddeerrffull!!"
 
