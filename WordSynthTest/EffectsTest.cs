@@ -15,5 +15,11 @@ namespace WordSynthTest {
       Func<string, string> effect = Effects.Echo(2);
       Assert.Equal("CC## iiss wwoonnddeerrffuull!!", effect.Invoke("C# is wonderful!"));
     }
+
+    [Fact]
+    public void TestLoud() {
+      Func<string, string> effect = Effects.Loud(2);
+      Assert.Equal("C#!! IS!! WONDERFUL!!!", effect.Invoke("C# is wonderful!"));
+    }
   }
 }

@@ -12,5 +12,6 @@ namespace WordSynth {
           words.Select(c => c.ToString() == " "
                        ? c.ToString()
                        : string.Concat(Enumerable.Repeat(c, rate))));
+
   }
 }
