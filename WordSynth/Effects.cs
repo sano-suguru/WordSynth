@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace WordSynth {
   public static class Effects {
-    public static string Reverce(string words) =>
+    public static Func<string, string> Reverce() => (string words) =>
       string.Join(" ", words.Split(" ").Select(word => string.Concat(word.Reverse())));
 
     public static Func<string, string> Echo(int rate) =>
