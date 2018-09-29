@@ -13,5 +13,7 @@ namespace WordSynth {
                        ? c.ToString()
                        : string.Concat(Enumerable.Repeat(c, rate))));
 
+    public static Func<string, string> Loud(int level) => (string words) =>
+      string.Join(" ", words.Split(" ").Select(word => word.ToUpper() + string.Concat(Enumerable.Repeat("!", level))));
   }
 }
